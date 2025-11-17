@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { CheckCircle2, Loader2, Heart } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
@@ -22,7 +22,7 @@ type RsvpFormData = z.infer<typeof rsvpSchema>;
 export function RsvpForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const totalSteps = 2;
+  const totalSteps = 3;
   const { toast } = useToast();
 
   const form = useForm<RsvpFormData>({
@@ -179,6 +179,33 @@ export function RsvpForm() {
                       </FormItem>
                     )}
                   />
+                </div>
+              )}
+
+              {/* Step 3: Love & Celebration Message */}
+              {currentStep === 3 && (
+                <div className="space-y-6 text-center py-8">
+                  <div className="flex justify-center gap-4 mb-6">
+                    <Heart className="w-16 h-16 text-primary fill-primary animate-pulse" />
+                    <span className="text-6xl">💕</span>
+                    <Heart className="w-16 h-16 text-primary fill-primary animate-pulse" />
+                  </div>
+                  
+                  <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
+                    We Can't Wait! 💒
+                  </h3>
+                  
+                  <p className="text-xl text-muted-foreground mb-2">
+                    Your presence will make our day extra special! ✨
+                  </p>
+                  
+                  <p className="text-lg text-muted-foreground">
+                    See you on March 21st, 2026! 🎉
+                  </p>
+                  
+                  <div className="text-4xl mt-6">
+                    😊 💐 🥂 🎊 💍
+                  </div>
                 </div>
               )}
             </Card>
