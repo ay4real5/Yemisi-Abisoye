@@ -5,7 +5,6 @@ import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card } from "@/components/ui/card";
@@ -16,7 +15,6 @@ import { useToast } from "@/hooks/use-toast";
 const rsvpSchema = z.object({
   guestName: z.string().min(2, "Please enter your full name"),
   attending: z.boolean(),
-  plusOneName: z.string().optional(),
 });
 
 type RsvpFormData = z.infer<typeof rsvpSchema>;
@@ -24,7 +22,7 @@ type RsvpFormData = z.infer<typeof rsvpSchema>;
 export function RsvpForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const totalSteps = 3;
+  const totalSteps = 2;
   const { toast } = useToast();
 
   const form = useForm<RsvpFormData>({
@@ -32,13 +30,17 @@ export function RsvpForm() {
     defaultValues: {
       guestName: "",
       attending: false,
-      plusOneName: "",
     },
   });
 
   const createRsvpMutation = useMutation({
     mutationFn: async (data: RsvpFormData) => {
-      return apiRequest("POST", "/api/rsvps", data);
+      const payload = {
+        guestName: data.guestName,
+        attending: data.attending,
+        plusOneName: "",
+      };
+      return apiRequest("POST", "/api/rsvps", payload);
     },
     onSuccess: () => {
       setIsSubmitted(true);
@@ -174,28 +176,6 @@ export function RsvpForm() {
                             Wedding Ceremony - Saturday 21st March 2026
                           </FormLabel>
                         </div>
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              )}
-
-              {/* Step 3: Plus One */}
-              {currentStep === 3 && (
-                <div className="space-y-6">
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
-                    Plus One (Optional)
-                  </h3>
-                  <FormField
-                    control={form.control}
-                    name="plusOneName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Guest Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Guest's full name" {...field} data-testid="input-plus-one-name" />
-                        </FormControl>
-                        <FormMessage />
                       </FormItem>
                     )}
                   />
