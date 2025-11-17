@@ -2,10 +2,11 @@ import { pgTable, text, varchar, boolean, timestamp } from "drizzle-orm/pg-core"
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 import { sql } from "drizzle-orm";
+import { randomUUID } from "crypto";
 
 // RSVP Submissions
 export const rsvps = pgTable("rsvps", {
-  id: varchar("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  id: varchar("id").primaryKey().$defaultFn(() => randomUUID()),
   guestName: text("guest_name").notNull(),
   attending: boolean("attending").notNull().default(false),
   plusOneName: text("plus_one_name"),
@@ -22,7 +23,7 @@ export type Rsvp = typeof rsvps.$inferSelect;
 
 // Bridal Party Members
 export const bridalPartyMembers = pgTable("bridal_party_members", {
-  id: varchar("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  id: varchar("id").primaryKey().$defaultFn(() => randomUUID()),
   name: text("name").notNull(),
   role: text("role").notNull(), // "groomsman" or "bridesmaid"
   title: text("title").notNull(), // e.g., "Best Man", "Maid of Honor"
@@ -40,7 +41,7 @@ export type BridalPartyMember = typeof bridalPartyMembers.$inferSelect;
 
 // Guest Messages (Digital Guestbook)
 export const guestMessages = pgTable("guest_messages", {
-  id: varchar("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  id: varchar("id").primaryKey().$defaultFn(() => randomUUID()),
   guestName: text("guest_name").notNull(),
   messageType: text("message_type").notNull(), // "text" or "video"
   content: text("content").notNull(), // Text message or video URL
@@ -59,7 +60,7 @@ export type GuestMessage = typeof guestMessages.$inferSelect;
 
 // Photo Gallery Items
 export const galleryPhotos = pgTable("gallery_photos", {
-  id: varchar("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  id: varchar("id").primaryKey().$defaultFn(() => randomUUID()),
   photoUrl: text("photo_url").notNull(),
   category: text("category").notNull(), // "engagement", "pre-wedding", "events"
   caption: text("caption"),
@@ -77,7 +78,7 @@ export type GalleryPhoto = typeof galleryPhotos.$inferSelect;
 
 // Story Milestones (Our Story Timeline)
 export const storyMilestones = pgTable("story_milestones", {
-  id: varchar("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  id: varchar("id").primaryKey().$defaultFn(() => randomUUID()),
   date: text("date").notNull(),
   title: text("title").notNull(),
   description: text("description").notNull(),
