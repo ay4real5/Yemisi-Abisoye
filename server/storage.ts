@@ -105,14 +105,6 @@ export class DBStorage implements IStorage {
         relationTo: "bride",
       },
       {
-        name: "Sherifah",
-        role: "bridesmaid",
-        title: "Bride's Sister",
-        photoUrl: "/attached_assets/sherifah_1759829289654.jpg",
-        story: "Hi! My name is Sherifah. I'm a nurse and the bride's sister. I'm thrilled to see her marry someone who truly completes her and brings out the best in her. Wishing them a lifetime of love and laughter! 💚",
-        relationTo: "bride",
-      },
-      {
         name: "Hameedah",
         role: "bridesmaid",
         title: "Chief Bridesmaid",
