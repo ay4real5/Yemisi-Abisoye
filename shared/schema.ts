@@ -29,6 +29,7 @@ export const bridalPartyMembers = pgTable("bridal_party_members", {
   photoUrl: text("photo_url"),
   story: text("story").notNull(), // How they met the couple
   relationTo: text("relation_to").notNull(), // "bride" or "groom"
+  displayOrder: text("display_order").default("99"), // Controls display order
 });
 
 export const insertBridalPartyMemberSchema = createInsertSchema(bridalPartyMembers).omit({

@@ -244,7 +244,7 @@ export class DBStorage implements IStorage {
   }
 
   async getBridalPartyMembers(): Promise<BridalPartyMember[]> {
-    return await this.db.select().from(bridalPartyMembers);
+    return await this.db.select().from(bridalPartyMembers).orderBy(bridalPartyMembers.displayOrder);
   }
 
   async createBridalPartyMember(insertMember: InsertBridalPartyMember): Promise<BridalPartyMember> {
