@@ -8,6 +8,7 @@ import { RsvpForm } from "@/components/RsvpForm";
 import { GiftRegistrySection } from "@/components/GiftRegistrySection";
 import { PhotoGallerySection } from "@/components/PhotoGallerySection";
 import { FAQSection } from "@/components/FAQSection";
+import { AccommodationsSection } from "@/components/AccommodationsSection";
 import { GuestbookSection } from "@/components/GuestbookSection";
 import { Footer } from "@/components/Footer";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -27,6 +28,7 @@ export default function Home() {
         <GiftRegistrySection />
         <PhotoGallerySection />
         <FAQSection />
+        <AccommodationsSection />
         <GuestbookSection />
       </main>
       <Footer />
