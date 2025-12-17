@@ -77,12 +77,12 @@ export function FAQSection() {
               className="border border-border rounded-lg px-6 data-[state=open]:bg-card"
             >
               <AccordionTrigger
-                className="font-serif text-lg font-semibold text-foreground hover:no-underline py-6"
+                className="font-serif text-lg font-semibold text-foreground hover:no-underline py-6 text-center justify-center [&>svg]:ml-2"
                 data-testid={`faq-question-${index}`}
               >
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+              <AccordionContent className="text-muted-foreground pb-6 leading-relaxed text-center">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
