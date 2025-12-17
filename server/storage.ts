@@ -354,7 +354,7 @@ export class MemStorage implements IStorage {
         role: "groomsman",
         title: "Best Man",
         photoUrl: "/attached_assets/6754765r76374_1759830696151.jpg",
-        story: "My name is Olayinka a very Proud Chelsea Supporter that dislikes Liverpool FC. I am sure the groom knows better😁 I am a friend of Abisoye from our MSC Days at Teesside University...and we have kept in touch ever since we play FIFA then, even though I have never won any game against him. I guess I would get one over Him after he gets Married. But just Know Abisoye is sure Guy #facts I met Yemisi The bride also during our Msc Days Through some group of Friends at Teesside then in a shared accommodation. And ever since we have been very good friends till date. Looking forward to the Big Day ...e go loud.......gege",
+        story: "My name is Olayinka a very Proud Chelsea Supporter that dislikes Liverpool FC. I am sure the groom knows better😁 I am a friend of Abisoye from our MSC Days at Teesside University...and we have kept in touch ever since we play FIFA then, even though I have never won any game against him. I guess I would get one over Him after he gets Married. But just Know Abisoye is a sure Guy #facts I met Yemisi The bride also during our Msc Days Through some group of Friends at Teesside then in a shared accommodation. And ever since we have been very good friends till date. Looking forward to the Big Day ...e go loud.......gege",
         relationTo: "groom",
       },
       {
@@ -378,7 +378,7 @@ export class MemStorage implements IStorage {
         role: "groomsman",
         title: "Groomsman",
         photoUrl: "/attached_assets/ridwan_1759926895327.jpg",
-        story: "My name is Ridwan, but everyone calls me Rio. I'm a friend of Yemisi and Abisoye. I'm really happy to be part of your special day and can't wait to celebrate with you both! Warm regards, Rio.",
+        story: "My name is Ridwan, but everyone calls me Rio. I'm a friend of Yemisi and Abisoye. I'm really happy to be part of your special day and can't wait to celebrate with you both.",
         relationTo: "groom",
       },
       {
