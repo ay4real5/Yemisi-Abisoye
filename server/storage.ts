@@ -16,3 +16,6 @@ class LocalStorage implements Storage {
 }
 
 export const storageInstance: Storage = new LocalStorage();
+
+// Provide a named export `storage` so imports like `import { storage } from "./storage"` work
+export const storage: Storage = storageInstance;
