@@ -141,7 +141,7 @@ export class DBStorage implements IStorage {
         role: "groomsman",
         title: "Best Man",
         photoUrl: "/attached_assets/6754765r76374_1759830696151.jpg",
-        story: "My name is Olayinka a very Proud Chelsea Supporter that dislikes Liverpool FC. I am sure the groom knows better😁 I am a friend of Abisoye from our MSC Days at Teesside University...and we have kept in touch ever since we play FIFA then, even though I have never won any game against him. I guess I would get one over Him after he gets Married. But just Know Abisoye is sure Guy #facts I met Yemisi The bride also during our Msc Days Through some group of Friends at Teesside then in a shared accommodation. And ever since we have been very good friends till date. Looking forward to the Big Day ...e go loud.......gege",
+        story: "My name is Olayinka a very proud Chelsea supporter that dislikes Liverpool FC. I am sure the groom knows better. I am a friend of Abisoye from our MSC Days at Teesside University...and we have kept in touch ever since we played FIFA then, even though I have never won any game against him. I guess I would get one over Him after he gets Married. But just know Abisoye is a sure Guy #facts I met Yemisi, the bride also during our Msc days through some group of friends at Teesside then in a shared accommodation; and ever since we have been very good friends till date. Looking forward to the Big Day ...e go loud.......gege",
         relationTo: "groom",
       },
       {
@@ -362,7 +362,7 @@ export class MemStorage implements IStorage {
         role: "groomsman",
         title: "Best Man",
         photoUrl: "/attached_assets/6754765r76374_1759830696151.jpg",
-        story: "My name is Olayinka a very Proud Chelsea Supporter that dislikes Liverpool FC. I am sure the groom knows better😁 I am a friend of Abisoye from our MSC Days at Teesside University...and we have kept in touch ever since we play FIFA then, even though I have never won any game against him. I guess I would get one over Him after he gets Married. But just Know Abisoye is sure Guy #facts I met Yemisi The bride also during our Msc Days Through some group of Friends at Teesside then in a shared accommodation. And ever since we have been very good friends till date. Looking forward to the Big Day ...e go loud.......gege",
+        story: "My name is Olayinka a very proud Chelsea supporter that dislikes Liverpool FC. I am sure the groom knows better. I am a friend of Abisoye from our MSC Days at Teesside University...and we have kept in touch ever since we played FIFA then, even though I have never won any game against him. I guess I would get one over Him after he gets Married. But just know Abisoye is a sure Guy #facts I met Yemisi, the bride also during our Msc days through some group of friends at Teesside then in a shared accommodation; and ever since we have been very good friends till date. Looking forward to the Big Day ...e go loud.......gege",
         relationTo: "groom",
       },
       {
