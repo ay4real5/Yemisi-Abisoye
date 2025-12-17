@@ -40,6 +40,29 @@ export function BridalPartySection() {
     );
   }
 
+  // Check if there are no members at all
+  if (!isLoading && !error && members.length === 0) {
+    return (
+      <section id="bridal-party" className="py-20 md:py-32 bg-card">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Our Bridal Party
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              The special people standing beside us on our big day
+            </p>
+          </div>
+          <Card className="p-12 text-center">
+            <p className="text-muted-foreground text-lg">
+              Our bridal party information will be announced soon. Stay tuned!
+            </p>
+          </Card>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="bridal-party" className="py-20 md:py-32 bg-card">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,8 +80,15 @@ export function BridalPartySection() {
           <h3 className="font-serif text-3xl font-bold text-center text-foreground mb-8">
             Groomsmen
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {groomsmen.map((member, index) => (
+          {groomsmen.length === 0 ? (
+            <Card className="p-8 text-center">
+              <p className="text-muted-foreground">
+                Groomsmen information will be announced soon.
+              </p>
+            </Card>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-8">
+              {groomsmen.map((member, index) => (
               <Card key={member.id} className={`overflow-hidden hover-elevate ${
                 index === groomsmen.length - 1 && groomsmen.length % 2 !== 0 
                   ? 'md:col-span-2 md:mx-auto md:max-w-md' 
@@ -111,8 +141,9 @@ export function BridalPartySection() {
                   </Button>
                 </div>
               </Card>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Bridesmaids */}
@@ -120,8 +151,15 @@ export function BridalPartySection() {
           <h3 className="font-serif text-3xl font-bold text-center text-foreground mb-8">
             Bridesmaids
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {bridesmaids.map((member, index) => (
+          {bridesmaids.length === 0 ? (
+            <Card className="p-8 text-center">
+              <p className="text-muted-foreground">
+                Bridesmaids information will be announced soon.
+              </p>
+            </Card>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-8">
+              {bridesmaids.map((member, index) => (
               <Card key={member.id} className={`overflow-hidden hover-elevate ${
                 index === bridesmaids.length - 1 && bridesmaids.length % 2 !== 0 
                   ? 'md:col-span-2 md:mx-auto md:max-w-md' 
@@ -175,7 +213,8 @@ export function BridalPartySection() {
                 </div>
               </Card>
             ))}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
