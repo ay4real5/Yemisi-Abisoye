@@ -85,7 +85,7 @@ export class DBStorage implements IStorage {
         role: "bridesmaid",
         title: "Bride's Best Girl",
         photoUrl: "/attached_assets/bimpe_1759827170279.jpg",
-        story: "Hiiyyyyyyaaaaa😘😘😘 My name is Oyebimpe, but everyone calls me Bibi. the bride's best girl and favorite person to argue with. 😜 We met at work ,and from day one, we've been t[...]
+        story: "Hiiyyyyyyaaaaa😘😘😘 My name is Oyebimpe, but everyone calls me Bibi. the bride's best girl and favorite person to argue with. 😜 We met at work, and from day one, we've been inseparable! Always finding a reason to laugh and challenge each other in the best ways.",
         relationTo: "bride",
       },
       {
@@ -100,5 +100,3 @@ export class DBStorage implements IStorage {
   
     await this.db.insert(bridalPartyMembers).values(members);
   }
-
-/* Remaining file content unchanged */
