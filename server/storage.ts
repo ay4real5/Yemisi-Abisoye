@@ -125,7 +125,7 @@ export class DBStorage implements IStorage {
         role: "bridesmaid",
         title: "Maid of Honor",
         photoUrl: "/attached_assets/WhatsApp Image 2025-10-24 at 12.23.37_1761493154587.jpeg",
-        story: "My name is Omosomhi and I'm proudly serving as the maid of honor🎉🍷🫶- basically the unpaid assistant, emotional support, and emergency problem-solver for the day 😉😭😂. Watching her find someone who truly makes her happy means a lot to me. I've seen her laugh, love, and care with her whole heart - and seeing that same love reflected back today makes this day extra special. Wishing you both a lifetime of laughter, peace, and late-night gist sessions that never end.",
+        story: "My name is Omosomhi and I'm proudly serving as the maid of honor 🎉🍷🫶- basically the unpaid assistant, emotional support, and emergency problem-solver for the day 😉😭😂. Watching her find someone who truly makes her happy means a lot to me. I've seen her laugh, love, and care with her whole heart - and seeing that same love reflected back today makes this day extra special. Wishing you both a lifetime of laughter, peace, and late-night gist sessions that never end.",
         relationTo: "bride",
       },
       {
