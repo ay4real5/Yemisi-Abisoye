@@ -165,7 +165,7 @@ export class DBStorage implements IStorage {
         role: "groomsman",
         title: "Groomsman",
         photoUrl: "/attached_assets/ridwan_1759926895327.jpg",
-        story: "My name is Ridwan, but everyone calls me Rio. I'm a friend of Yemisi and Abisoye. I'm really happy to be part of your special day and can't wait to celebrate with you both! Warm regards, Rio.",
+        story: "My name is Ridwan, but everyone calls me Rio. I'm a friend of Yemisi and Abisoye. I'm really happy to be part of your special day and can't wait to celebrate with you both!",
         relationTo: "groom",
       },
       {
@@ -386,7 +386,7 @@ export class MemStorage implements IStorage {
         role: "groomsman",
         title: "Groomsman",
         photoUrl: "/attached_assets/ridwan_1759926895327.jpg",
-        story: "My name is Ridwan, but everyone calls me Rio. I'm a friend of Yemisi and Abisoye. I'm really happy to be part of your special day and can't wait to celebrate with you both! Warm regards, Rio.",
+        story: "My name is Ridwan, but everyone calls me Rio. I'm a friend of Yemisi and Abisoye. I'm really happy to be part of your special day and can't wait to celebrate with you both!",
         relationTo: "groom",
       },
       {
