@@ -33,9 +33,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/bridal-party", async (_req, res) => {
     try {
       const members = await storage.getBridalPartyMembers();
-      res.json(members);
+      res.json(members || []);
     } catch (error: any) {
-      res.status(500).json({ error: error.message });
+      console.error("Error fetching bridal party members:", error);
+      res.json([]);
     }
   });
 
@@ -53,9 +54,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/guest-messages", async (_req, res) => {
     try {
       const messages = await storage.getAllGuestMessages();
-      res.json(messages);
+      res.json(messages || []);
     } catch (error: any) {
-      res.status(500).json({ error: error.message });
+      console.error("Error fetching guest messages:", error);
+      res.json([]);
     }
   });
 
@@ -85,9 +87,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/gallery-photos", async (_req, res) => {
     try {
       const photos = await storage.getAllGalleryPhotos();
-      res.json(photos);
+      res.json(photos || []);
     } catch (error: any) {
-      res.status(500).json({ error: error.message });
+      console.error("Error fetching gallery photos:", error);
+      res.json([]);
     }
   });
 
