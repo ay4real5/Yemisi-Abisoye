@@ -402,7 +402,7 @@ export class MemStorage implements IStorage {
         role: "groomsman",
         title: "Groomsman",
         photoUrl: "/attached_assets/WhatsApp Image 2025-10-22 at 13.33.15_1761492602589.jpeg",
-        story: "My name is Blessing Babalola — an unapologetic Arsenal FC supporter who enjoys a good game of FIFA on the console. I'm a mutual friend of both the bride and groom, and it's a joy to celebrate with two amazing people I've known for quite some time.",
+        story: "My name is Blessing Babalola — an unapologetic Arsenal-FC supporter who enjoys a good game of FIFA on the console. I'm a mutual friend of both the bride and groom, and it's a joy to celebrate with two amazing people I've known for quite some time.",
         relationTo: "groom",
       },
     ];
