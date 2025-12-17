@@ -60,7 +60,7 @@ export const storage = {
       return undefined;
     }
     
-    const currentHearts = parseInt(message.hearts || "0");
+    const currentHearts = Number(message.hearts || "0");
     const [updatedMessage] = await db
       .update(guestMessages)
       .set({ hearts: String(currentHearts + 1) })
@@ -192,7 +192,10 @@ export async function seedData() {
 
     console.log("✓ Database seeding completed successfully!");
   } catch (error) {
-    console.error("Error seeding database:", error);
+    console.error("Error during database seeding:", error);
+    if (error instanceof Error) {
+      console.error("Seeding error details:", error.message);
+    }
     // Don't throw - allow app to continue even if seeding fails
   }
 }
