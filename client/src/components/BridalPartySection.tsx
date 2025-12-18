@@ -84,8 +84,8 @@ export function BridalPartySection() {
                 
                 {/* Story Section */}
                 <div className="p-6">
-                  <div className={`overflow-hidden transition-all ${
-                    expandedId === member.id ? 'max-h-96' : 'max-h-24'
+                  <div className={`overflow-hidden transition-all duration-300 ${
+                    expandedId === member.id ? 'max-h-none' : 'max-h-24'
                   }`}>
                     <p className="text-muted-foreground leading-relaxed">
                       {member.story}
@@ -147,8 +147,8 @@ export function BridalPartySection() {
                 
                 {/* Story Section */}
                 <div className="p-6">
-                  <div className={`overflow-hidden transition-all ${
-                    expandedId === member.id ? 'max-h-96' : 'max-h-24'
+                  <div className={`overflow-hidden transition-all duration-300 ${
+                    expandedId === member.id ? 'max-h-none' : 'max-h-24'
                   }`}>
                     <p className="text-muted-foreground leading-relaxed">
                       {member.story}
