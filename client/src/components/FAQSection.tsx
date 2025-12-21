@@ -25,7 +25,7 @@ export function FAQSection() {
     },
     {
       question: "When should I RSVP by?",
-      answer: "To help us with our planning, please RSVP as soon as possible. However, we would appreciate if this is done by 28th February 2026.",
+      answer: "To help us with our planning, please RSVP as soon as possible. However, we would appreciate if this is done by 31st January 2026.",
     },
     {
       question: "When should I arrive to the ceremony?",
