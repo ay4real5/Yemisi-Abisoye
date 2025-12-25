@@ -123,7 +123,7 @@ export class DBStorage implements IStorage {
       {
         name: "Uju",
         role: "bridesmaid",
-        title: "Bridesmaid",
+        title: "Bride's Friend",
         photoUrl: "/attached_assets/uju_1759829840451.jpg",
         story: "My name is Uju, and I'm a proud bridesmaid for Yemisi! We met in 2021 and became close friends while living together. Having shared those memories, it's a true joy to now celebrate this chapter with her and Abisoye whom I met around the same time. I'm so happy my girl found her soul mate and I wish them all the very best in their union.",
         relationTo: "bride",
@@ -344,7 +344,7 @@ export class MemStorage implements IStorage {
       {
         name: "Uju",
         role: "bridesmaid",
-        title: "Bridesmaid",
+        title: "Bride's Friend",
         photoUrl: "/attached_assets/uju_1759829840451.jpg",
         story: "My name is Uju, and I'm a proud bridesmaid for Yemisi! We met in 2021 and became close friends while living together. Having shared those memories, it's a true joy to now celebrate this chapter with her and Abisoye whom I met around the same time. I'm so happy my girl found her soul mate and I wish them all the very best in their union.",
         relationTo: "bride",
