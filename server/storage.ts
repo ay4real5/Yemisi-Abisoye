@@ -89,11 +89,11 @@ export class DBStorage implements IStorage {
         relationTo: "bride",
       },
       {
-        name: "Kofoworola Rabiu",
+        name: "Nafisat",
         role: "bridesmaid",
-        title: "Bride's Cousin",
-        photoUrl: "/attached_assets/kofo_1759828085583.jpg",
-        story: "My name is Kofoworola Rabiu, I am the brides cousin. I'm related to her through my mum's side of the family. I live in London, I work in Tech and my favorite hobby is eating and minding my business",
+        title: "Bride's Friend",
+        photoUrl: "/attached_assets/nafisat_1768095126204.png",
+        story: "My name is Nafisat, and I am proud to be one of Yemisi's bridesmaids. I met Yemisi and Abisoye in 2021, and it has been a true joy watching their journey unfold since then. Yemisi is such a sweet soul, and being her friend comes so easily, she has a way of making everyone around her feel loved and valued. Watching her find that same love with Abisoye has been truly heartwarming. I am so happy to celebrate their love, and I pray that the bond they share continues to grow stronger, sweeter, and never turns sour. May their union be filled with joy, peace, and lasting happiness.",
         relationTo: "bride",
       },
       {
@@ -102,14 +102,6 @@ export class DBStorage implements IStorage {
         title: "Bride's Cousin",
         photoUrl: "/attached_assets/bimpizzle_1759829102989.jpg",
         story: "Hi, I'm Bimpe to family and friends — Bimpizzle on social media! I'm an introverted fashionista who loves to travel and has a favorite color that's the perfect combo of black and white. Growing up with the beautiful bride as little cousins to now watching her step into this new chapter is such a full-circle moment, and I'm so honored to be part of it!",
-        relationTo: "bride",
-      },
-      {
-        name: "Sherifah",
-        role: "bridesmaid",
-        title: "Bride's Sister",
-        photoUrl: "/attached_assets/sherifah_1759829289654.jpg",
-        story: "Hi! My name is Sherifah. I'm a nurse and the bride's sister. I'm thrilled to see her marry someone who truly completes her and brings out the best in her. Wishing them a lifetime of love and laughter! 💚",
         relationTo: "bride",
       },
       {
@@ -134,6 +126,14 @@ export class DBStorage implements IStorage {
         title: "Maid of Honor",
         photoUrl: "/attached_assets/WhatsApp Image 2025-10-24 at 12.23.37_1761493154587.jpeg",
         story: "My name is Omosomhi and I'm proudly serving as the maid of honor🎉🍷🫶- basically the unpaid assistant, emotional support, and emergency problem-solver for the day 😉😭😂. Watching her find someone who truly makes her happy means a lot to me. I've seen her laugh, love, and care with her whole heart - and seeing that same love reflected back today makes this day extra special. Wishing you both a lifetime of laughter, peace, and late-night gist sessions that never end.",
+        relationTo: "bride",
+      },
+      {
+        name: "Kofoworola Rabiu",
+        role: "bridesmaid",
+        title: "Bride's Cousin",
+        photoUrl: "/attached_assets/kofo_1759828085583.jpg",
+        story: "My name is Kofoworola Rabiu, I am the brides cousin. I'm related to her through my mum's side of the family. I live in London, I work in Tech and my favorite hobby is eating and minding my business",
         relationTo: "bride",
       },
       {
@@ -318,11 +318,11 @@ export class MemStorage implements IStorage {
         relationTo: "bride",
       },
       {
-        name: "Kofoworola Rabiu",
+        name: "Nafisat",
         role: "bridesmaid",
-        title: "Bride's Cousin",
-        photoUrl: "/attached_assets/kofo_1759828085583.jpg",
-        story: "My name is Kofoworola Rabiu, I am the brides cousin. I'm related to her through my mum's side of the family. I live in London, I work in Tech and my favorite hobby is eating and minding my business",
+        title: "Bride's Friend",
+        photoUrl: "/attached_assets/nafisat_1768095126204.png",
+        story: "My name is Nafisat, and I am proud to be one of Yemisi's bridesmaids. I met Yemisi and Abisoye in 2021, and it has been a true joy watching their journey unfold since then. Yemisi is such a sweet soul, and being her friend comes so easily, she has a way of making everyone around her feel loved and valued. Watching her find that same love with Abisoye has been truly heartwarming. I am so happy to celebrate their love, and I pray that the bond they share continues to grow stronger, sweeter, and never turns sour. May their union be filled with joy, peace, and lasting happiness.",
         relationTo: "bride",
       },
       {
@@ -355,6 +355,14 @@ export class MemStorage implements IStorage {
         title: "Maid of Honor",
         photoUrl: "/attached_assets/WhatsApp Image 2025-10-24 at 12.23.37_1761493154587.jpeg",
         story: "My name is Omosomhi and I'm proudly serving as the maid of honor🎉🍷🫶- basically the unpaid assistant, emotional support, and emergency problem-solver for the day 😉😭😂. Watching her find someone who truly makes her happy means a lot to me. I've seen her laugh, love, and care with her whole heart - and seeing that same love reflected back today makes this day extra special. Wishing you both a lifetime of laughter, peace, and late-night gist sessions that never end.",
+        relationTo: "bride",
+      },
+      {
+        name: "Kofoworola Rabiu",
+        role: "bridesmaid",
+        title: "Bride's Cousin",
+        photoUrl: "/attached_assets/kofo_1759828085583.jpg",
+        story: "My name is Kofoworola Rabiu, I am the brides cousin. I'm related to her through my mum's side of the family. I live in London, I work in Tech and my favorite hobby is eating and minding my business",
         relationTo: "bride",
       },
       {
