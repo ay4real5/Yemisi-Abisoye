@@ -29,6 +29,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.patch("/api/rsvps/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const updated = await storage.updateRsvp(id, req.body);
+      if (!updated) {
+        return res.status(404).json({ error: "RSVP not found" });
+      }
+      res.json(updated);
+    } catch (error: any) {
+      res.status(400).json({ error: error.message });
+    }
+  });
+
+  app.delete("/api/rsvps/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const deleted = await storage.deleteRsvp(id);
+      if (!deleted) {
+        return res.status(404).json({ error: "RSVP not found" });
+      }
+      res.status(204).send();
+    } catch (error: any) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
   // Bridal Party Routes
   app.get("/api/bridal-party", async (_req, res) => {
     try {

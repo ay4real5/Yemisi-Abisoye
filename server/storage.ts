@@ -24,6 +24,8 @@ import { sql } from "drizzle-orm";
 export interface IStorage {
   createRsvp(rsvp: InsertRsvp): Promise<Rsvp>;
   getAllRsvps(): Promise<Rsvp[]>;
+  updateRsvp(id: string, data: Partial<InsertRsvp>): Promise<Rsvp | undefined>;
+  deleteRsvp(id: string): Promise<boolean>;
   
   getBridalPartyMembers(): Promise<BridalPartyMember[]>;
   createBridalPartyMember(member: InsertBridalPartyMember): Promise<BridalPartyMember>;
@@ -243,6 +245,16 @@ export class DBStorage implements IStorage {
     return await this.db.select().from(rsvps).orderBy(desc(rsvps.createdAt));
   }
 
+  async updateRsvp(id: string, data: Partial<InsertRsvp>): Promise<Rsvp | undefined> {
+    const [updated] = await this.db.update(rsvps).set(data).where(eq(rsvps.id, id)).returning();
+    return updated;
+  }
+
+  async deleteRsvp(id: string): Promise<boolean> {
+    const result = await this.db.delete(rsvps).where(eq(rsvps.id, id)).returning();
+    return result.length > 0;
+  }
+
   async getBridalPartyMembers(): Promise<BridalPartyMember[]> {
     return await this.db.select().from(bridalPartyMembers).orderBy(bridalPartyMembers.displayOrder);
   }
@@ -423,7 +435,7 @@ export class MemStorage implements IStorage {
       },
     ];
 
-    members.forEach(member => {
+    members.forEach((member, index) => {
       const id = randomUUID();
       this.bridalPartyMembers.set(id, { 
         name: member.name,
@@ -432,6 +444,7 @@ export class MemStorage implements IStorage {
         photoUrl: member.photoUrl ?? null,
         story: member.story,
         relationTo: member.relationTo,
+        displayOrder: String(index + 1),
         id 
       });
     });
@@ -501,6 +514,20 @@ export class MemStorage implements IStorage {
     return Array.from(this.rsvps.values());
   }
 
+  async updateRsvp(id: string, data: Partial<InsertRsvp>): Promise<Rsvp | undefined> {
+    const existing = this.rsvps.get(id);
+    if (existing) {
+      const updated = { ...existing, ...data };
+      this.rsvps.set(id, updated);
+      return updated;
+    }
+    return undefined;
+  }
+
+  async deleteRsvp(id: string): Promise<boolean> {
+    return this.rsvps.delete(id);
+  }
+
   async getBridalPartyMembers(): Promise<BridalPartyMember[]> {
     return Array.from(this.bridalPartyMembers.values());
   }
@@ -514,6 +541,7 @@ export class MemStorage implements IStorage {
       photoUrl: insertMember.photoUrl ?? null,
       story: insertMember.story,
       relationTo: insertMember.relationTo,
+      displayOrder: insertMember.displayOrder ?? null,
       id 
     };
     this.bridalPartyMembers.set(id, member);
